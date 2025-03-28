@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const fileName = document.getElementById('file-name');
     const convertBtn = document.getElementById('convert-btn');
     const progressBar = document.querySelector('.progress-bar');
-    const statusText = document.getElementById('status-text');
     const downloadContainer = document.getElementById('download-container');
     const downloadLink = document.getElementById('download-link');
 
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fileInput.addEventListener('change', () => {
         if (fileInput.files.length > 0) {
             fileName.textContent = fileInput.files[0].name;
-            statusText.textContent = 'Ready to convert';
             downloadContainer.classList.add('hidden');
         } else {
             fileName.textContent = 'No file chosen';
@@ -21,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Convert button handler (single event listener)
     convertBtn.addEventListener('click', async () => {
         if (!fileInput.files || fileInput.files.length === 0) {
-            statusText.textContent = 'Please select a file first';
             return;
         }
 
@@ -47,10 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: formData
             });
 
-            if (!uploadResponse.ok) {
-                throw new Error('Conversion complete!');
-            }
-
             const { fileId } = await uploadResponse.json();
             statusText.textContent = 'Converting to PowerPoint...';
             progressBar.style.width = '50%';
@@ -74,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const { pptxUrl, filename } = await convertResponse.json();
-            statusText.textContent = 'Conversion complete!';
             progressBar.style.width = '100%';
 
             // Show download link
@@ -84,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('Error:', error);
-            statusText.textContent = `Error: ${error.message}`;
             progressBar.style.width = '0%';
         } finally {
             convertBtn.disabled = false;
