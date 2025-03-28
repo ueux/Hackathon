@@ -1,0 +1,47 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.DS_Store
+
+# Build files
+dist/
+build/
+.cache/
+.next/
+out/
+
+# Logs
+logs/
+*.log
+yarn-debug.log*
+yarn-error.log*
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Python backend
+pythonBackend/__pycache__/
+pythonBackend/*.pyc
+pythonBackend/*.pyo
+pythonBackend/.venv/
+pythonBackend/venv/
+pythonBackend/.pytest_cache/
+pythonBackend/.mypy_cache/
+pythonBackend/.tox/
+
+# Temporary files
+tmp/
+temp/
+*.swp
+*.swo
+
+# OS-specific files
+Thumbs.db
