@@ -130,7 +130,7 @@ numerical_analysis=true
 
 ```
 doc2ppt/
-├── auth-service/          # Node.js authentication
+├── backend/          # Node.js authentication
 │   ├── controllers/
 │   ├── models/
 │   ├── routes/
@@ -138,7 +138,7 @@ doc2ppt/
 │   ├── app.js
 │   └── package.json
 │
-├── conversion-service/    # Python document processing
+├── pythonBackend/    # Python document processing
 │   ├── modules/
 │   │   ├── document_parser.py
 │   │   └── pptx_generator.py
@@ -146,7 +146,7 @@ doc2ppt/
 │   ├── main.py
 │   └── requirements.txt
 │
-├── public/                # Frontend assets
+├── Application/                # Frontend assets
 │   ├── css/
 │   ├── js/
 │   ├── images/
