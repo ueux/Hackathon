@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
+  background-image: url('bg3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.upload-box {
+  border: 2px dashed #00ccff;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00ccff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#file-name {
+  display: block;
+  margin-top: 10px;
+}
+
+.customization-section {
+  margin-bottom: 20px;
+}
+
+.audience-level {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.style-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.progress-bar::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 0;
+  background: #00ccff;
+  border-radius: 5px;
+}
+
+#convert-btn {
+  padding: 10px 20px;
+  background: #00ccff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00cc66;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-message {
+  color: #ff4444;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ff4444;
+  border-radius: 5px;
+  background-color: rgba(255, 68, 68, 0.1);
+}
+.error-message {
+  color: #ff4444;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ff4444;
+  border-radius: 4px;
+  background-color: rgba(255, 68, 68, 0.1);
+}
+
+.hidden {
+  display: none;
+}

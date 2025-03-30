@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="../static/css/bg2.mp4" type="video/mp4">
+    </video>
+    <div class="login-container">
+        <h1 class="login-title">Welcome</h1>
+        <p class="login-subtitle">Please login to continue</p>
+
+        <form class="login-form" id="loginForm">
+            <input type="text" placeholder="Username" class="login-input" id="user" required>
+            <input type="password" placeholder="Password" class="login-input" id="loginPassword" required>
+            <button type="submit" class="login-btn" id="loginBtn">Login</button>
+        </form>
+        <div class="login-links">
+            <a href="signup.html" class="sign-up">Sign Up</a>
+        </div>
+    </div>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("user").value.trim();
+            const password = document.getElementById("loginPassword").value.trim();
+
+            try {
+                const response = await fetch('http://localhost:8000/api/v1/users/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ username, password }),
+                    credentials: 'include' // Important for cookies
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert("Login successful!");
+                    window.location.href = "homepage.html";
+                } else {
+                    alert(data.message || "Login failed");
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert("An error occurred during login");
+            }
+        });
+        </script>
+</body>
+</html>

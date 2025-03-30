@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc2PPT Converter</title>
+    <style>/* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+
+            scroll-behavior: smooth;
+
+
+        }
+
+        /* Header */
+        header {
+            background:rgba(34, 33, 33, 0.858);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0px 0px 20px cyan;
+            margin-bottom: 100px;
+
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-left: 20px;
+            color:cyan;
+            text-shadow:  0px 0px 20px cyan;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        .section {
+            padding: 100px 20px;
+            text-align: center;
+            justify-content: center;
+            box-sizing: content-box;
+            background: #1c060695;
+            margin: 100px 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px cyan;
+            color:white;
+            overflow: hidden;
+            font-size: 25px;
+        }
+        .section1{
+            text-align: left;
+        }
+        .section2{
+            text-align: left;
+        }
+        .section2 ul li{
+            margin:10px;
+        }
+
+        /* Call to Action Button */
+        .cta-btn {
+            background: cyan;
+            opacity: 0.8;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow:  0px 0px 20px cyan;
+        }
+
+        .cta-btn:hover {
+            background: cyan;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1c060695;
+            color: cyan;
+
+            align-items: center;
+            bottom: 0;
+            width: 100%;
+            text-shadow:  0px 0px 20px cyan;
+             display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+        </style>
+</head>
+<body style="background-image: url('../static/css/bg3.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+    <header>
+        <h1 class="logo">Doc2PPT Converter</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <h2>Welcome to Doc2PPT Converter</h2>
+        <p>Effortlessly convert your documents into stunning PowerPoint slides.</p>
+        <button onclick="window.location.href='index.html'" class="cta-btn">Get Started</button>
+    </section>
+
+    <section id="dashboard" class="section">
+        <h2>Dashboard</h2>
+        <p>Manage your uploaded files and track conversions easily.</p>
+    </section>
+
+    <section id="services" class="section section1">
+        <h2>Our Services</h2>
+        <ul>
+        <li>
+        Confidential Document Analysis: Securely analyze company documents without compromising data security.</li>
+
+        <li>Automated Presentation Creation: Generate professional PowerPoint presentations, reducing manual effort by 70-80%.</li>
+
+        <li>Smart Summarization: Extract and emphasize critical information, while removing unnecessary details.</li>
+
+        <li>Template Customization: Offer standardized presentation formats aligned with consistent branding.</li>
+
+        <li>Audience Adaptation: Customize presentations based on audience levels, suchs executive, management, or technical.</li>
+
+        <li>Review & Editing Interface: Provide an intuitive interface for users to refine and edit auto-generated slides.</li>
+
+        <li>Visual Enhancements: Integrate visuals intelligently to make presentations engaging and effective.</li>
+
+        </ul>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email: support@doc2ppt.com</p>
+        <p>Phone: +123-456-7890</p>
+    </section>
+
+    <section id="about" class="section section2">
+        <h2>About Us</h2>
+
+        <ul>
+
+<li>We understand that creating impactful presentations from lengthy reports, proposals, or strategy documents can be time-consuming and tedious. That’s why our intelligent tool automates the process, using advanced AI to extract key insights, summarize content, and generate visually appealing slides.</li>
+
+<b>Why Choose Us?</b>
+<li>
+✅ Efficiency – Reduce presentation creation time by 70-80%, allowing professionals to focus on strategy and decision-making.
+</li>
+<li>
+✅ Data Security – Our tool processes confidential documents with industry-standard security protocols, ensuring data integrity and privacy.
+</li>
+<li>
+✅ Customization & Branding – Maintain consistent corporate identity with pre-defined templates and audience-specific content structuring.
+</li>
+<li>
+✅ AI-Driven Accuracy – Extracts critical insights, eliminating unnecessary details while preserving essential business intelligence.
+</li>
+<li>
+Our mission is to empower businesses with cutting-edge automation, allowing them to communicate effectively and make data-driven decisions faster than ever.
+</li>
+        </ul>
+    </section>
+
+    <section id="privacy" class="section">
+        <h2>Privacy Policy</h2>
+        <p>We prioritize your privacy and ensure the security of your documents.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Doc2PPT Converter. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
